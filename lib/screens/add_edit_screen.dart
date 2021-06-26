@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_todos/models/todo.dart';
 import 'package:todos_app_core/todos_app_core.dart';
 
-
 typedef OnSaveCallback = Function(String task, String note);
+//
 
 class AddEditScreen extends StatefulWidget {
   final bool isEditing;
@@ -78,7 +78,7 @@ class _AddEditScreenState extends State<AddEditScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         key:
-        isEditing ? ArchSampleKeys.saveTodoFab : ArchSampleKeys.saveNewTodo,
+            isEditing ? ArchSampleKeys.saveTodoFab : ArchSampleKeys.saveNewTodo,
         tooltip: isEditing ? localizations.saveChanges : localizations.addTodo,
         child: Icon(isEditing ? Icons.check : Icons.add),
         onPressed: () {

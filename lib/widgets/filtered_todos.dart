@@ -35,8 +35,8 @@ class FilteredTodos extends StatelessWidget {
                   ScaffoldMessenger.of(context).showSnackBar(DeleteTodoSnackBar(
                     key: ArchSampleKeys.snackbar,
                     todo: todo,
-                    onUndo: () =>
-                        BlocProvider.of<TodosBloc>(context).add(TodoAdded(todo)),
+                    onUndo: () => BlocProvider.of<TodosBloc>(context)
+                        .add(TodoAdded(todo)),
                     localizations: localizations,
                   ));
                 },
@@ -47,7 +47,8 @@ class FilteredTodos extends StatelessWidget {
                     }),
                   );
                   if (removedTodo != null) {
-                    ScaffoldMessenger.of(context).showSnackBar(DeleteTodoSnackBar(
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(DeleteTodoSnackBar(
                       key: ArchSampleKeys.snackbar,
                       todo: todo,
                       onUndo: () => BlocProvider.of<TodosBloc>(context)
